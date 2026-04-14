@@ -161,7 +161,7 @@ function App() {
                   <span className="event-peer">Peer: {event.peer_id}</span>
                 </div>
                 <div className="event-payload">
-                  <pre>{JSON.stringify(event, (k, v) => k === 'event' || k === 'timestamp' || k === 'peer_id' ? undefined : v, 2)}</pre>
+                  <pre>{JSON.stringify(event, null, 2)}</pre>
                 </div>
               </div>
             ))

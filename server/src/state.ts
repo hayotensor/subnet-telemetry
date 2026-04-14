@@ -40,8 +40,6 @@ export class TelemetryState {
       this.peers.set(telemetryEvent.peer_id, peer);
     }
     peer.lastSeen = now;
-    console.log('telemetryEvent?.data?.message_size:', telemetryEvent?.data?.message_size);
-    console.log('telemetryEvent.event:', telemetryEvent.event);
 
     if (telemetryEvent.event === 'gossip_sent') {
       this.currentGossipSentCount++;
